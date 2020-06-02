@@ -3,7 +3,7 @@
 Clone the repo locally:
 
 ```sh
-git clone https://github.com/landish/pingcrm-react.git
+git clone https://github.com/niraulabijay/inertia-booking.git
 cd pingcrm-react
 ```
 
