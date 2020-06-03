@@ -13,6 +13,7 @@
     "ext-gd": "*",
     "barryvdh/laravel-debugbar": "^3.2",
     "beyondcode/laravel-dump-server": "^1.0",
+    "cartalyst/sentinel": "^3.0",
     "facade/ignition": "^1.4",
     "fideloper/proxy": "^4.0",
     "fzaninotto/faker": "^1.4",
@@ -34,7 +35,10 @@
     ],
     "psr-4": {
       "App\\": "app/"
-    }
+    },
+    "files": [
+      "app/helper/helper.php"
+    ]
   },
   "autoload-dev": {
     "psr-4": {

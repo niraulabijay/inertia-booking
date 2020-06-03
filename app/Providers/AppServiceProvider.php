@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Inertia\Inertia;
 use League\Glide\Server;
 use Carbon\CarbonImmutable;
@@ -38,15 +39,15 @@ class AppServiceProvider extends ServiceProvider
         Inertia::share([
             'auth' => function () {
                 return [
-                    'user' => Auth::user() ? [
-                        'id' => Auth::user()->id,
-                        'first_name' => Auth::user()->first_name,
-                        'last_name' => Auth::user()->last_name,
-                        'email' => Auth::user()->email,
-                        'role' => Auth::user()->role,
+                    'user' => Sentinel::getUser() ? [
+                        'id' => Sentinel::getUser()->id,
+                        'first_name' => Sentinel::getUser()->first_name,
+                        'last_name' => Sentinel::getUser()->last_name,
+                        'email' => Sentinel::getUser()->email,
+                        'role' => 'admin',
                         'account' => [
-                            'id' => Auth::user()->account->id,
-                            'name' => Auth::user()->account->name,
+                            'id' => '1',
+                            'name' => 'admin',
                         ],
                     ] : null,
                 ];

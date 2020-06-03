@@ -16,5 +16,6 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="bootstrap.bundle" level="application" />
   </component>
 </module>

@@ -61,6 +61,11 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'remember' => \Reinink\RememberQueryStrings::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+
+        //custom middlewares
+        'admin' => \App\Http\Middleware\AdminMiddleware::class,
+        'visitor' => \App\Http\Middleware\VisitorMiddleware::class,
+        'user' => \App\Http\Middleware\UserMiddleware::class,
     ];
 
     /**
